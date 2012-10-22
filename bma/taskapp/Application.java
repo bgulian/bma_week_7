@@ -18,6 +18,7 @@ public class Application {
 			t.setDate(Task.END_DATE,"October " + (i + 10) + ", 2012" );
 			tl.addTask(t);
 		}
+		
 		printTasks(tl.getTasks());
 		Tasklist filterTL = tl.list(new Taskfilter() {
 			
@@ -26,10 +27,11 @@ public class Application {
 				  return t.getDates()[Task.BEGIN_DATE].after(new Date("October 12,2012") ); 
 			  }
 		});
-		printTasks(filterTL.getTasks());
+		
+		//printTasks(filterTL.getTasks());
 	}
 	
-	public static void printTasks(Task[] tlArray) {
+	public static void printTasks(Object[] tlArray) {
 		for (int i=0; i < tlArray.length; i++) {
 			System.out.println ( tlArray[i]);
 		}

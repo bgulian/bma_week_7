@@ -12,8 +12,8 @@ public class Tasklist {
 	public void addTask(Task t) {
 		tasks.add(t);
 	}
-	public Task[] getTasks() {
-		return (Task[])this.tasks.toArray();
+	public Object[] getTasks() {
+		return this.tasks.toArray();
 	}
 	public Task getTask(String name) {
 		return this.find(name);

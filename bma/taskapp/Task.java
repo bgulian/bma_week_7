@@ -9,8 +9,8 @@ import java.util.Locale;
 
 class Task {
 	private String taskName="";
-	private Date beginDate;
-	private Date endDate;
+	private Date beginDate = new Date();
+	private Date endDate = new Date();
 	private boolean complete = false;
 	public static final int BEGIN_DATE = 0;
 	public static final int END_DATE = 1;
@@ -57,6 +57,7 @@ class Task {
 	 * @param daterep
 	 */
 	public void setDate(int whichDate, String daterep){
+		
 		Date d = this.getDate(whichDate);
 		try {
 			Date ld = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH).parse(daterep);
